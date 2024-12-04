@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Combined Grid Layouts</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: black;
+        margin: 0;
+        padding: 20px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+      }
+
+      /* Container for first set of grids */
+      .layout1 {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      /* First grid layout */
+      .grid-container1 {
+        display: grid;
+        grid-template-areas:
+          "box1 box2 box3"
+          "box4 box4 box3"
+          "box5 box6 box6";
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 5px;
+        width: 400px;
+        height: 300px;
+      }
+
+      .grid-container2 {
+        display: grid;
+        grid-template-areas:
+          "box1 box2"
+          "box3 box3";
+        grid-template-rows: 1fr 2fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+        width: 400px;
+        height: 300px;
+      }
+
+      /* Second grid layout */
+      .layout2 {
+        display: grid;
+        grid-template-areas:
+          "box1 box2 box2 box3"
+          "box1 box4 box5 box3"
+          "box1 box6 box7 box8";
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 5px;
+        width: 500px;
+        height: 300px;
+      }
+
+      .box {
+        border: 2px solid black;
+        border-radius: 5px;
+      }
+
+      /* Colors for first grid layout */
+      .grid-container1 .box1 { grid-area: box1; background-color: cyan; }
+      .grid-container1 .box2 { grid-area: box2; background-color: teal; }
+      .grid-container1 .box3 { grid-area: box3; background-color: skyblue; }
+      .grid-container1 .box4 { grid-area: box4; background-color: lightgreen; }
+      .grid-container1 .box5 { grid-area: box5; background-color: yellow; }
+      .grid-container1 .box6 { grid-area: box6; background-color: red; }
+
+      .grid-container2 .box1 { grid-area: box1; background-color: pink; }
+      .grid-container2 .box2 { grid-area: box2; background-color: lightblue; }
+      .grid-container2 .box3 { grid-area: box3; background-color: coral; }
+
+      /* Colors for second grid layout */
+      .layout2 .box1 { grid-area: box1; background-color: cyan; }
+      .layout2 .box2 { grid-area: box2; background-color: teal; }
+      .layout2 .box3 { grid-area: box3; background-color: skyblue; }
+      .layout2 .box4 { grid-area: box4; background-color: lightgreen; }
+      .layout2 .box5 { grid-area: box5; background-color: pink; }
+      .layout2 .box6 { grid-area: box6; background-color: yellow; }
+      .layout2 .box7 { grid-area: box7; background-color: red; }
+      .layout2 .box8 { grid-area: box8; background-color: coral; }
+    </style>
+  </head>
+  <body>
+    <h1>Different layouts using Grid.</h1>
+    <div class="layout1">
+      <div class="grid-container1">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+        <div class="box box5"></div>
+        <div class="box box6"></div>
+      </div>
+      <div class="grid-container2">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+      </div>
+    </div>
+
+    <!-- Second Layout -->
+    <div class="layout2">
+      <div class="box box1"></div>
+      <div class="box box2"></div>
+      <div class="box box3"></div>
+      <div class="box box4"></div>
+      <div class="box box5"></div>
+      <div class="box box6"></div>
+      <div class="box box7"></div>
+      <div class="box box8"></div>
+    </div>
+  </body>
+</html>
